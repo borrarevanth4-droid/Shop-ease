@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShopEase</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background: #f4f5f9; display: grid; grid-template-areas: "h" "n" "c" "m" "f"; min-height: 100vh; grid-template-rows: auto auto auto 1fr auto; }
+  header { grid-area: h; background: #fff; padding: 1rem; display: grid; grid-template-columns: 1fr auto; font-weight: bold; font-size: 1.4rem; color: #4f46e5; }
+  nav { grid-area: n; background: #4f46e5; display: grid; grid-auto-flow: column; justify-content: start; }
+  nav a { color: #fff; padding: .8rem 1rem; text-decoration: none; }
+  .cats { grid-area: c; padding: 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: .8rem; }
+  .cats div { background: #fff; padding: 1rem; text-align: center; border-radius: 10px; }
+  main { grid-area: m; padding: 1rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+  .card { background: #fff; border-radius: 12px; overflow: hidden; display: grid; }
+  .img { font-size: 4rem; text-align: center; padding: 1.5rem; background: #e0e7ff; }
+  .info { padding: 1rem; display: grid; gap: .4rem; }
+  .price { font-weight: bold; color: #16a34a; }
+  button { background: #4f46e5; color: #fff; border: 0; padding: .5rem; border-radius: 6px; cursor: pointer; }
+  footer { grid-area: f; background: #151826; color: #fff; text-align: center; padding: 1.5rem; }
+</style>
+</head>
+<body>
+  <header><span>ShopEase</span><span>🛒 Cart</span></header>
+  <nav><a href="#">Home</a><a href="#">Shop</a><a href="#">Deals</a><a href="#">Contact</a></nav>
+
+  <section class="cats">
+    <div>🎧 Electronics</div><div>👕 Fashion</div><div>🏠 Home</div><div>⚽ Sports</div>
+  </section>
+
+  <main>
+    <div class="card"><div class="img">🎧</div><div class="info"><h3>Headphones</h3><p class="price">₹2,499</p><button>Add to Cart</button></div></div>
+    <div class="card"><div class="img">⌚</div><div class="info"><h3>Smart Watch</h3><p class="price">₹4,999</p><button>Add to Cart</button></div></div>
+    <div class="card"><div class="img">👟</div><div class="info"><h3>Sneakers</h3><p class="price">₹2,199</p><button>Add to Cart</button></div></div>
+    <div class="card"><div class="img">🎒</div><div class="info"><h3>Backpack</h3><p class="price">₹1,899</p><button>Add to Cart</button></div></div>
+  </main>
+
+  <footer>© 2026 ShopEase. All rights reserved.</footer>
+</body>
+</html>
